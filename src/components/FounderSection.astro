@@ -1,0 +1,221 @@
+<section id='founder' class='founder-section'>
+	<h2 class='section-heading'>Be Kind to Your Mind</h2>
+
+	<div class='founder-container'>
+		<!-- Founder Image and Arc -->
+		<div class='founder-image'>
+			<div class='image-arc'>
+				<img
+					src='./images/founder.png'
+					alt='Founder Image'
+					class='founder-photo'
+				/>
+				<svg viewBox='0 0 200 100' class='arc-text'>
+					<path
+						id='arcPath'
+						d='M 20,100 A 90,90 0 0,1 180,100'
+						fill='transparent'></path>
+					<text>
+						<textPath href='#arcPath' startOffset='50%' text-anchor='middle'>
+							FOUNDER
+						</textPath>
+					</text>
+				</svg>
+			</div>
+			<p class='founder-subtext'>
+				The Happiness Empire is my IKIGAI that helps in improving mental and
+				emotional well-being.
+			</p>
+		</div>
+
+		<!-- Founder Content -->
+		<div class='founder-content'>
+			<p class='intro'>
+				Heyy! I'm <span class='highlight'>Anjali Gursahaney</span>
+			</p>
+			<p class='description'>
+				I'm glad you've reached here! The Happiness Empire is my IKIGAI that
+				helps in improving mental and emotional well-being.
+			</p>
+			<p class='description'>
+				I have been on the other side, working in MNCs and struggling with work
+				pressure, deadlines, toxic environments, unfair managers, and burning
+				out with panic attacks. All those years have helped greatly in creating
+				this space for you!
+			</p>
+			<p class='description'>
+				The Happiness Empire is not just a platform but a space that builds an
+				emotionally intelligent & spiritually aligned workforce.
+			</p>
+			<p class='description'>
+				Our mission is to help each individual learn sustainable practices that
+				make them emotionally and mentally fit.
+			</p>
+			<p class='description'>
+				When you decide to work with us, you take a step towards change.
+			</p>
+			<p class='description'>
+				I may not be great at math, but this is the one I understand: <br />
+				<strong>1 Organization = 500 employees (3 family members each)</strong
+				><br />
+				That is <strong>1500 lives</strong> becoming emotionally and mentally fit!
+			</p>
+			<p class='description'>
+				I like those numbers, so see you on the other side!
+			</p>
+
+			<!-- Signature -->
+			<div class='signature'>
+				<!-- <img
+					src='./images/signature.png'
+					alt="Anjali Gursahaney's Signature"
+					loading='lazy'
+				/> -->
+				<p class='founder-name'>Anjali Gursahaney</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	/* Section Styling */
+	.founder-section {
+		background-color: #fdf1f1; /* Light pink background */
+		text-align: center;
+	}
+
+	.section-heading {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #333;
+		margin-bottom: 2rem;
+		text-shadow: 2px 2px #f5c5c5;
+	}
+
+	/* Founder Container */
+	.founder-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: start;
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	/* Founder Image with Arc */
+	.founder-image {
+		flex: 1;
+		max-width: 300px;
+		text-align: center;
+	}
+
+	@media (min-width: 1024px) {
+		.founder-image {
+			position: sticky;
+			top: 120px;
+		}
+	}
+
+	.image-arc {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+	}
+
+	.founder-photo {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+		border: 8px solid #f5d7d7; /* Match arc background */
+		object-fit: cover;
+	}
+
+	.arc-text {
+		position: absolute;
+		top: -50px;
+		left: 0;
+		width: 200px;
+		height: 100px;
+	}
+
+	.arc-text textPath {
+		font-size: 0.9rem;
+		font-family: 'Poppins', sans-serif;
+		fill: #111;
+		text-transform: uppercase;
+		font-weight: bold;
+		letter-spacing: 2px;
+	}
+
+	.founder-subtext {
+		margin-top: 1rem;
+		font-size: 0.9rem;
+		color: #555;
+		font-style: italic;
+	}
+
+	/* Founder Content */
+	.founder-content {
+		flex: 2;
+		max-width: 600px;
+		text-align: left;
+		font-family: 'Dancing Script', cursive; /* Handwritten font */
+
+		& * > strong {
+			color: var(--secondary);
+		}
+	}
+
+	.intro {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.highlight {
+		color: #e84090;
+		font-weight: 800;
+	}
+
+	.description {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin-bottom: 1rem;
+	}
+
+	.description strong {
+		font-weight: 600;
+	}
+
+	/* Signature */
+	.signature {
+		margin-top: 2rem;
+		text-align: center;
+	}
+
+	.signature img {
+		width: 150px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.founder-name {
+		margin-top: 0.5rem;
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.founder-container {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.founder-content {
+			text-align: center;
+		}
+	}
+</style>

@@ -1,0 +1,118 @@
+---
+import ClientsCompanies from './ClientsCompanies.astro';
+---
+
+<section id='hero'>
+	<h1 class='hero-heading'>
+		Building a Happier & <span class='gradient-text'
+			>Spiritually Aligned Workforce</span
+		>
+	</h1>
+	<p class='hero-subtext'>
+		Unlock your team’s potential with our tailored solutions. Contact us today
+		to drive productivity and create a thriving, high-performing workforce.
+	</p>
+	<a href='#contact' class='hero-button'>Get Started</a>
+	<img src='./images/happy-people.png' class='hero-image' alt='Happy People' />
+
+	<ClientsCompanies />
+</section>
+
+<style>
+	#hero {
+		margin-top: 4rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* Hero Heading */
+	.hero-heading {
+		font-family: 'Poppins', sans-serif;
+		font-size: 2.5rem;
+		font-size: max(3.5vw, 2.5rem);
+		font-weight: 700;
+		text-align: center;
+		line-height: 1.2;
+		color: #111;
+	}
+
+	/* Gradient Text */
+	.gradient-text {
+		background: linear-gradient(
+			to right,
+			var(--gradient-start),
+			var(--gradient-end)
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		display: inline-block;
+	}
+
+	.hero-image {
+		width: 100%;
+		max-width: 600px;
+	}
+
+	.hero-subtext {
+		font-size: 1rem;
+		line-height: 1.6;
+		text-align: center;
+		color: #333;
+		max-width: 800px;
+		margin-top: 1.5rem;
+		padding: 0 1rem;
+	}
+
+	.hero-button {
+		display: inline-block;
+		margin-top: 2rem;
+		padding: 0.75rem 2rem;
+		font-family: 'Poppins', sans-serif;
+		font-size: 1rem;
+		font-weight: 600;
+		text-align: center;
+		color: #fff; /* White text */
+		background-color: var(--accent); /* Accent color */
+		border: none;
+		border-radius: 30px;
+		text-decoration: none;
+		cursor: pointer;
+		overflow: hidden;
+		position: relative;
+		transition:
+			transform 0.3s ease,
+			background-color 0.3s ease;
+	}
+
+	.hero-button:hover {
+		background-color: var(--gradient-start); /* Slight gradient on hover */
+		transform: translateY(-2px); /* Scale up for hover effect */
+	}
+
+	.hero-button::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 0.3),
+			rgba(255, 255, 255, 0)
+		);
+		transition: left 0.4s ease;
+		z-index: 1;
+	}
+
+	.hero-button:hover::before {
+		left: 100%; /* Slide animation on hover */
+	}
+
+	.hero-button span {
+		position: relative;
+		z-index: 2; /* Keep text above the sliding effect */
+	}
+</style>

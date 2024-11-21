@@ -1,0 +1,192 @@
+<section id='services' class='services-section'>
+	<h2 class='section-heading'>Our Services</h2>
+
+	<div class='services-container'>
+		<!-- Background Image -->
+		<div class='services-background'>
+			<img src='./images/mental-therapy.png' alt='Mental Health Illustration' />
+		</div>
+
+		<!-- Service Cards -->
+		<div class='service-card card-left'>
+			<h3 class='service-title'>1:1 Personalized Sessions</h3>
+			<p>
+				We offer individual coaching and counseling sessions with licensed
+				coaches and mental health professionals. These sessions help employees
+				discover purpose and enhance their quality of life.
+			</p>
+			<a href='#book' class='service-button'>Book Now</a>
+		</div>
+
+		<div class='service-card card-right'>
+			<h3 class='service-title'>Interactive Workshops</h3>
+			<p>
+				Our workshops are designed to engage employees and provide practical
+				skills to navigate workplace challenges and foster collaboration.
+			</p>
+			<a href='#book' class='service-button'>Book Now</a>
+		</div>
+
+		<div class='service-card card-center'>
+			<h3 class='service-title'>Group Therapy Sessions</h3>
+			<p>
+				Join our group therapy sessions to build stronger relationships and
+				experience shared support in tackling common workplace challenges.
+			</p>
+			<a href='#book' class='service-button'>Book Now</a>
+		</div>
+	</div>
+</section>
+
+<style>
+	/* General Section Styling */
+	.services-section {
+		position: relative;
+	}
+
+	.section-heading {
+		font-size: 2rem;
+		font-weight: 600;
+		color: var(--accent);
+		margin-bottom: 6rem;
+	}
+
+	/* Services Container */
+	.services-container {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr); /* 6 columns */
+		grid-template-rows: auto;
+		gap: 2rem; /* Space between items */
+		width: 90%;
+		justify-content: start;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	/* Background Image */
+	.services-background {
+		grid-column: 1 / span 6; /* Spans across all columns */
+		grid-row: 1 / 3; /* Spans 2 rows */
+		z-index: 1;
+		position: relative;
+	}
+
+	.services-background img {
+		width: 100%;
+		height: auto;
+		border-radius: 15px;
+		object-fit: contain;
+	}
+
+	/* Service Cards */
+	.service-card {
+		background: #fff;
+		max-height: max-content;
+		border-radius: 15px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		text-align: left;
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+		position: relative;
+		z-index: 2; /* Cards above the image */
+	}
+
+	.service-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px 15px var(--accent-tr3);
+	}
+
+	.service-title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--accent);
+		margin-bottom: 0.75rem;
+	}
+
+	.service-card p {
+		font-size: 0.95rem;
+		color: #555;
+		line-height: 1.6;
+		margin-bottom: 1.25rem;
+	}
+
+	.service-button {
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #fff;
+		background: var(--accent);
+		border: none;
+		border-radius: 20px;
+		text-decoration: none;
+		transition: transform 0.3s ease;
+		cursor: pointer;
+	}
+
+	.service-button:hover {
+		background: var(--gradient-start);
+		transform: translateY(-2px);
+	}
+
+	/* Specific Card Placement */
+	.card-left {
+		grid-column: 1 / span 2; /* Left side */
+		grid-row: 1; /* First row */
+		align-self: center;
+	}
+
+	.card-right {
+		grid-column: 5 / span 2; /* Right side */
+		grid-row: 1; /* First row */
+		align-self: center;
+	}
+
+	.card-center {
+		grid-column: 3 / span 2; /* Centered */
+		grid-row: 2; /* Second row */
+		justify-self: center;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.services-container {
+			grid-template-columns: repeat(4, 1fr); /* 4 columns for tablets */
+		}
+
+		.card-left {
+			grid-column: 1 / span 2;
+		}
+
+		.card-right {
+			grid-column: 3 / span 2;
+		}
+
+		.card-center {
+			grid-column: 2 / span 2; /* Centered in smaller layout */
+			grid-row: 2;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.services-container {
+			grid-template-columns: 1fr; /* Single column for mobile */
+			grid-template-rows: auto;
+		}
+
+		.services-background {
+			grid-column: span 1;
+			grid-row: auto;
+		}
+
+		.card-left,
+		.card-right,
+		.card-center {
+			grid-column: span 1;
+			grid-row: auto;
+		}
+	}
+</style>

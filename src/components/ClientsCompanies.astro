@@ -1,0 +1,71 @@
+---
+// Import client logos (adjust paths to your project structure)
+const clientLogos = [
+	'/images/acuity-client-logo.png',
+	'/images/chargeup-client-logo.png',
+	'/images/UNHCR-client-logo.png',
+	'/images/Wipro-client-logo.png',
+	'/images/reskills-client-logo.png',
+];
+---
+
+<div id='client-companies' class='client-companies'>
+	<h2 class='client-heading'>Clients Who Trust Us</h2>
+	<div class='client-logos'>
+		{
+			clientLogos.map((logo, index) => (
+				<img src={logo} alt={`Client ${index + 1}`} class='client-logo' />
+			))
+		}
+	</div>
+</div>
+
+<style>
+	/* Container Styles */
+	.client-companies {
+		padding: 2rem 1rem;
+		text-align: center;
+		background-color: #f9f9f9; /* Light background for contrast */
+	}
+
+	.client-heading {
+		font-family: 'Poppins', sans-serif;
+		font-size: 1.75rem;
+		font-weight: 600;
+		color: #757575;
+		margin-bottom: 1.5rem;
+	}
+
+	/* Logos Grid */
+	.client-logos {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 3.2rem;
+	}
+
+	/* Logo Styles */
+	.client-logo {
+		max-width: 6rem; /* Adjust size based on design */
+		height: 3.2rem;
+		object-fit: contain;
+		filter: grayscale(100%);
+		transition:
+			filter 0.3s ease-in-out,
+			transform 0.3s ease-in-out;
+		cursor: pointer;
+	}
+
+	.client-logo:hover {
+		filter: grayscale(0%);
+		transform: scale(1.1); /* Slight zoom effect on hover */
+	}
+
+	/* Responsive Design */
+	@media (max-width: 768px) {
+		.client-logo {
+			height: 1.8rem; /* Larger logos on larger screens */
+		}
+	}
+</style>

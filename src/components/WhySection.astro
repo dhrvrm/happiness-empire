@@ -1,0 +1,202 @@
+<section id='why' class='employee-wellbeing'>
+	<h2 class='section-heading'>Why Employee Well-Being Matters?</h2>
+
+	<!-- Grid Layout -->
+	<div class='bento-grid'>
+		<!-- Statistics -->
+		<div class='stat-box'>
+			<span class='stat-number'>60%</span>
+			<p>of employees feel <strong>anxious</strong></p>
+		</div>
+		<div class='stat-box secondary'>
+			<span class='stat-number stat-number-variation'>56%</span>
+			<p>are experiencing symptoms of <strong>depression</strong></p>
+		</div>
+		<div class='spacer'></div>
+		<div class='spacer'></div>
+
+		<!-- Image Section -->
+		<div class='why-image-container'>
+			<img src='./images/mental-health.png' alt='Mental Health' />
+		</div>
+
+		<!-- Benefits -->
+		<div class='benefit-item'>
+			<h3 class='benefit-title'>Productivity</h3>
+			<p>
+				Employees struggling with mental health issues are 35% less productive.
+			</p>
+		</div>
+		<div class='benefit-item'>
+			<h3 class='benefit-title'>Burnout Costs</h3>
+			<p>
+				Burnout costs companies an estimated $125 billion to $190 billion in
+				healthcare spending each year.
+			</p>
+		</div>
+		<div class='benefit-item'>
+			<h3 class='benefit-title'>Retention</h3>
+			<p>
+				Companies with strong well-being programs see a 20% increase in employee
+				retention.
+			</p>
+		</div>
+	</div>
+</section>
+
+<style>
+	/* General Section Styling */
+	.employee-wellbeing {
+		background-color: #fefefe;
+		color: #111;
+		font-family: 'Poppins', sans-serif;
+		text-align: left;
+	}
+
+	.section-heading {
+		font-size: 2rem;
+		font-weight: 600;
+		color: var(--accent);
+		margin-bottom: 2rem;
+	}
+
+	/* Bento Grid Layout */
+	.bento-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+		grid-auto-rows: minmax(100px, auto); /* Flexible row heights */
+		gap: 1.5rem;
+	}
+
+	/* Grid Items */
+	.stat-box {
+		background: linear-gradient(270deg, var(--accent-tr1) 5%, transparent);
+		border-radius: 15px;
+		padding: 1.5rem;
+		text-align: left;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+		transition: transform 0.3s ease;
+		margin-bottom: 4rem;
+		& strong {
+			color: var(--accent);
+		}
+	}
+
+	.stat-box.secondary {
+		background: linear-gradient(270deg, var(--secondary-tr1) 5%, transparent);
+		& strong {
+			color: var(--secondary);
+		}
+	}
+
+	.stat-box:hover {
+		transform: scale(1.05);
+	}
+
+	.stat-number {
+		font-size: 2.5rem;
+		font-weight: 700;
+		background: linear-gradient(
+			to right,
+			var(--gradient-start),
+			var(--gradient-end)
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-number-variation {
+		background: linear-gradient(
+			to right,
+			var(--secondary),
+			var(--secondary-tr1)
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	/* Image Section */
+	.why-image-container {
+		grid-column: span 3; /* Spans 3 columns */
+		grid-row: span 3; /* Spans 2 rows */
+	}
+
+	.why-image-container img {
+		width: 100%;
+		height: auto;
+		border-radius: 15px;
+	}
+
+	/* Spacer */
+	.spacer {
+		grid-column: span 1; /* Occupies 1 column as empty space */
+	}
+
+	/* Benefits Section */
+	.benefit-item {
+		background: #fff;
+		border-radius: 15px;
+		padding: 1rem 1.5rem;
+		box-shadow: 0 4px 10px var(--accent-tr3);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
+		position: relative;
+		text-align: left;
+	}
+
+	@media (min-width: 1024px) {
+		.benefit-item {
+			margin-left: -12rem;
+		}
+		.benefit-item:nth-child(odd) {
+			margin-left: -4rem;
+		}
+	}
+
+	.benefit-item:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	.benefit-title {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--accent);
+		margin-bottom: 0.5rem;
+	}
+
+	.benefit-item p {
+		font-size: 0.95rem;
+		color: #555;
+		line-height: 1.6;
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.bento-grid {
+			grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+		}
+
+		.why-image-container {
+			grid-column: span 2; /* Spans 2 columns on smaller screens */
+			grid-row: span 1; /* Spans only 1 row */
+		}
+	}
+
+	@media (max-width: 768px) {
+		.bento-grid {
+			grid-template-columns: 1fr; /* 1 column for mobile */
+			grid-auto-rows: auto;
+		}
+
+		.why-image-container {
+			grid-column: span 1; /* Spans 1 column on mobile */
+			grid-row: auto;
+		}
+	}
+</style>
